@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Card, TextContainer, Text } from "@shopify/polaris";
+import { LegacyCard , VerticalStack, Text } from "@shopify/polaris";
 import { Toast } from "@shopify/app-bridge-react";
 import { useAppQuery, useAuthenticatedFetch } from "../hooks";
 
-export function ProductsCard() {
+export function ProductsCard () {
 
   const emptyToastProps = { content: null };
   const [isLoading, setIsLoading] = useState(true);
@@ -35,19 +35,7 @@ export function ProductsCard() {
       },
     },
   });
-  const {
-    produtData,
-    refetch: getProduct,
-  } = useAppQuery({
-    url: "/api/products/product.json",
-    reactQueryOptions: {
-      onSuccess: () => {
-        setIsLoading(false);
-      },
-    },
-  });
 
-  console.log("productData", produtData);
   const toastMarkup = toastProps.content && !isRefetchingCount && (
     <Toast {...toastProps} onDismiss={() => setToastProps(emptyToastProps)} />
   );
@@ -71,7 +59,7 @@ export function ProductsCard() {
   return (
     <>
       {toastMarkup}
-      <Card
+      <LegacyCard 
         title="Product Counter"
         sectioned
         primaryFooterAction={{
@@ -80,7 +68,7 @@ export function ProductsCard() {
           loading: isLoading,
         }}
       >
-        <TextContainer spacing="loose">
+        <VerticalStack spacing="loose">
           <p>
             Sample products are created with a default title and price. You can
             remove them at any time.
@@ -90,12 +78,9 @@ export function ProductsCard() {
             <Text variant="bodyMd" as="p" fontWeight="semibold">
               {isLoadingCount ? "-" : data.count}
             </Text>
-            <Text variant="bodyMd" as="p" fontWeight="semibold">
-              {produtData}
-            </Text>
           </Text>
-        </TextContainer>
-      </Card>
+        </VerticalStack>
+      </LegacyCard >
     </>
   );
 }

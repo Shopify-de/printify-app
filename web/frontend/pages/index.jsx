@@ -82,6 +82,8 @@ export default function HomePage() {
           <ProductsCard />
         </Layout.Section>
       </Layout>
+
+      
     </Page>
   );
 }

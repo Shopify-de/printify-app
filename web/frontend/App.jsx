@@ -1,12 +1,15 @@
 import { BrowserRouter } from "react-router-dom";
 import { NavigationMenu } from "@shopify/app-bridge-react";
 import Routes from "./Routes";
-
+import { Header } from './components'
 import {
   AppBridgeProvider,
   QueryProvider,
   PolarisProvider,
 } from "./components";
+import { Layout } from "@shopify/polaris";
+
+// import Header from "./components/Header/header"
 
 export default function App() {
   // Any .tsx or .jsx files in /pages will become a route
@@ -18,19 +21,17 @@ export default function App() {
       <BrowserRouter>
         <AppBridgeProvider>
           <QueryProvider>
-            <NavigationMenu
+            {/* <NavigationMenu
               navigationLinks={[
                 {
                   label: "Products",
                   destination: "/products",
                 },
-                {
-                  label: "Orders",
-                  destination: "/orders",
-                },
               ]}
-            />
-            <Routes pages={pages} />
+            /> */}
+                <Header />
+                <Routes pages={pages} />
+            
           </QueryProvider>
         </AppBridgeProvider>
       </BrowserRouter>
