@@ -5,9 +5,13 @@ import {
   Text,
   Badge,
 } from '@shopify/polaris';
-import React from 'react';
+import React, { useState } from 'react';
+
 
 export default function Orders() {
+
+  const [search, setSearch] = useState('')
+
   const orders = [
     {
       id: '1020',
@@ -42,12 +46,12 @@ export default function Orders() {
     plural: 'orders',
   };
 
-  const {selectedResources, allResourcesSelected, handleSelectionChange} =
+  const { selectedResources, allResourcesSelected, handleSelectionChange } =
     useIndexResourceState(orders);
 
   const rowMarkup = orders.map(
     (
-      {id, order, date, customer, total, paymentStatus, fulfillmentStatus},
+      { id, order, date, customer, total, paymentStatus, fulfillmentStatus },
       index,
     ) => (
       <IndexTable.Row
@@ -72,35 +76,37 @@ export default function Orders() {
 
   return (
     <div className="container_main">
-    <div className='page_header'>
-      <h1 className='page_title'>My Orders</h1>
-      <button className='header_btn' onClick={((e) => { console.log("import") })}>Create Order</button>
-    </div >
-    <div className='page_content'>
-    <LegacyCard>
-      <IndexTable
-        resourceName={resourceName}
-        itemCount={orders.length}
-        selectedItemsCount={
-          allResourcesSelected ? 'All' : selectedResources.length
-        }
-        onSelectionChange={handleSelectionChange}
-        headings={[
-          {title: 'Order'},
-          {title: 'Date'},
-          {title: 'Customer'},
-          {title: 'Total', alignment: 'end'},
-          {title: 'Payment status'},
-          {title: 'Fulfillment status'},
-        ]}
-      >
-        {rowMarkup}
-      </IndexTable>
-    </LegacyCard>
+      <div className='page_header'>
+        <h1 className='page_title'>My Orders</h1>
+        <button className='header_btn' onClick={((e) => { console.log("import") })}>Create Order</button>
+      </div >
+      <div className='page_content'>
+        <div className='Search' style={{marginBottom: 20}}>
+          <input type='text' className='input_search' placeholder='Search...' value={search} onChange={((e) => setSearch(e.target.value))} />
+        </div>
+        <LegacyCard>
+          <IndexTable
+            resourceName={resourceName}
+            itemCount={orders.length}
+            selectedItemsCount={
+              allResourcesSelected ? 'All' : selectedResources.length
+            }
+            onSelectionChange={handleSelectionChange}
+            headings={[
+              { title: 'Order' },
+              { title: 'Date' },
+              { title: 'Customer' },
+              { title: 'Total', alignment: 'end' },
+              { title: 'Payment status' },
+              { title: 'Fulfillment status' },
+            ]}
+          >
+            {rowMarkup}
+          </IndexTable>
+        </LegacyCard>
+      </div>
     </div>
-  </div>
-    
+
   );
 }
 
-  
