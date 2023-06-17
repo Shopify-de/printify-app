@@ -21,6 +21,7 @@ export function Header() {
         Title: 'Details',
         Link: 'product/productDetail'
     },
+
 ];
     const settings = [
         {

@@ -1,13 +1,13 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import './card.css'
 
 export function Card(props) {
   const item = props?.data
 
-
   return (
+    <Link to={`/details?id=${item.id}`}>
     <div className='card_item'>
-      <a href='#' className='item_link'>
         <div className='card_image'>
           <span className={`${item.tag[0].replaceAll(" ", '')} card_tag`} >{item.tag[0]}</span>
           <img className="card_media" src={item.featureImage} />
@@ -17,7 +17,7 @@ export function Card(props) {
           <h6 className='card_title'>{item.title}</h6>
           <p className='card_tagline'>{item.tagline}</p>
         </div>
-      </a>
     </div>
+    </Link>
   )
 }

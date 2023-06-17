@@ -2,14 +2,12 @@
 import { Card } from '../components'
 import { useState } from 'react';
 import { products,category } from '../assets/halper/dummyData'
+
 export default function HomePage() {
 
   const [search, setSearch] = useState('');
-  console.log(search);
   const data = products
   const datacategory = category
-
-
 
   return (
     <div style={{ background: "#fff" }}>

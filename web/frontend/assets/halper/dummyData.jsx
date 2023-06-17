@@ -1,5 +1,6 @@
 export const products = [
     {
+        id : "001",
         title: "Unisex Heavy Cotton Tee",
         tagline: "Gildan 5000",
         category: "t-shirts",
@@ -48,6 +49,7 @@ export const products = [
         ]
     },
     {
+        id : "002",
         title: "Unisex Garment-Dyed T-shirt",
         tagline: "Comfort Colors® 1717",
         category: "t-shirts",
@@ -95,6 +97,7 @@ export const products = [
         ]
     },
     {
+        id : "003",
         title: "Unisex Recycled Organic T-Shirt",
         tagline: "Comfort Colors® 1717",
         category: "t-shirts",
@@ -142,6 +145,7 @@ export const products = [
         ]
     },
     {
+        id : "004",
         title: "Unisex Garment-Dyed T-shirt",
         tagline: "Comfort Colors® 1717",
         category: "t-shirts",
