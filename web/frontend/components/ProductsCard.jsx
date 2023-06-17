@@ -43,7 +43,7 @@ export function ProductsCard () {
   const handlePopulate = async () => {
     setIsLoading(true);
     const response = await fetch("/api/products/create");
-
+    
     if (response.ok) {
       await refetchProductCount();
       setToastProps({ content: "5 products created!" });

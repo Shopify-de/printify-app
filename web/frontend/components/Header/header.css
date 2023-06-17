@@ -4,6 +4,8 @@
     border-bottom: 1px solid #e3e4e5;
     box-shadow: 0 1px 3px rgba(0,0,0,.04);
     z-index: 20;
+    position: fixed;
+    top: 0;
 }
 .Header_content{
     margin: auto;
@@ -13,7 +15,7 @@
 }
 a{
     text-decoration: none;
-    color:#000
+    color: var(--textColor)
 }
 .flex {
     display: flex;
@@ -33,22 +35,27 @@ a{
     display: flex;
     gap: 20px;
 }
+.branding{
+    margin-right: 30px;
+}
 .nav_item a{
-    color: #17262b;
-    font-size: 18px;
+    color: var(--textColor);
+    font-family: RobotoRegular;
+    font-size: 16px;
     transition: all .2s ease;
-    font-weight: 600;
 }
 .nav_item a.active{
-    color: #29ab51;
+    color: var(--primaryColor);
     transition: all .2s ease;
 }
 
 
 .tag_line{
-    font-size: 18px;
-    color:#17262b;
+    font-family: RobotoRegular;
+    font-size: 16px;
+    color:var(--textColor);
     font-weight: 500;
+    
 }
 .userAction{
     gap:20px;
@@ -60,16 +67,16 @@ a{
     min-width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #29ab51;
+    background-color: var(--primaryColor);
     border: none;
     cursor: pointer;
-    color: #fff;
+    color: var(--textWhite)
 }
 
 .setting {
     position: absolute;
     top: 50px;
-    background: #fff;
+    background: var(--textWhite);
     border-radius: 5px;
     width: 100%;
     padding: 10px;
@@ -88,11 +95,13 @@ a{
 p.account-title {
     font-size: 14px;
     color: #8e8e8e;
+    font-family: RobotoRegular;
 }
 
 span.account-email {
     font-size: 14px;
     color: #17262b;
+    font-family: RobotoMedium;
 }
 .account_info{
     margin-bottom: 10px;
@@ -108,9 +117,10 @@ span.account-email {
 .setting_item:hover{
     background-color: #e3e3e3;
     border-radius: 4px;
-    color: #29ab51;
+    color: var(--primaryColor);
 }
 .setting_item a{
     font-size: 16px;
-    color: #17262b;
+    font-family: RobotoRegular;
+    color: var(--textColor);
 }

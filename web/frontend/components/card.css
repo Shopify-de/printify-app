@@ -1,0 +1,84 @@
+.card_media {
+    transition: .3s all ease;
+    width: 100%;
+}
+
+.card_image {
+    position: relative;
+    overflow: hidden;
+}
+
+.card_tag {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    padding: 0.125rem 0.5rem;
+    border-radius: -100px;
+    font-size: 12px;
+    z-index: 111;
+}
+
+.Bestseller {
+    border: 1px solid #c3862c;
+    background-color: #faf7d7;
+    color: #9e591c;
+
+}
+
+.Newarrivals {
+    border: 1px solid #2b6ca3;
+    background-color: #e1eff9;
+    color: #1e5180;
+}
+
+.Eco-friendly {
+    border: 1px solid #248e4c;
+    background-color: #e2f7e3;
+    color: #1f6b45;
+}
+
+.card_content {
+    padding: 10px 10px;
+
+    height: 80px;
+}
+
+.card_title {
+    font-size: 15px;
+    padding-bottom: 5px;
+    font-family: RobotoRegular;
+}
+
+.card_tagline {
+    font-size: 14px;
+    padding-bottom: 5px;
+    font-family: RobotoRegular;
+}
+
+.card_item:hover {
+    background-color: #f1f1f1;
+    transition: .4s all ease;
+}
+
+.card_item {
+    transition: .4s all ease;
+}
+.card_media_hover{
+    display: none;
+    width: 100%;
+    transition: .3s all ease;
+}
+.card_item:hover .card_media_hover{
+    display: block;
+    transition: .3s all ease;
+    transform: scale(1.1);
+    overflow: hidden;
+}
+.card_item:hover .card_media{
+    transition: .3s all ease;
+    display: none;
+    
+}

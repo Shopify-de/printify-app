@@ -1,10 +1,11 @@
-import './pages.css'
+import '../pages.css'
 
 import React from 'react';
+import { Link } from "react-router-dom";
 import { Select } from '@shopify/polaris';
 import { Checkbox } from '@shopify/polaris';
 import { useState, useCallback } from 'react';
-import { EditMajor , OrdersMajor, MobileVerticalDotsMajor} from '@shopify/polaris-icons';
+import { EditMajor, OrdersMajor, MobileVerticalDotsMajor } from '@shopify/polaris-icons';
 import { Icon } from '@shopify/polaris';
 
 
@@ -119,7 +120,7 @@ export default function Products() {
             <p className='row_title'> </p>
           </div>
           {products.map((item) => (
-            <div key={item.id} className='Row align_top' style={{marginTop: 20}}>
+            <div key={item.id} className='Row align_top' style={{ marginTop: 20 }}>
               <div className='images'>
                 <Checkbox
                   checked={checked}
@@ -134,10 +135,13 @@ export default function Products() {
               <span className='p_inventory'>{item.inventory}</span>
               <span className='p_status'>{item.status}</span>
               <div className='actions'>
-                <Icon
-                  source={EditMajor}
-                  color="base"
-                />
+                <Link to={`/product/productDetail?id=${item.id}`}>
+                  <Icon
+                    source={EditMajor}
+                    color="base"
+                  />
+                </Link>
+
                 <Icon
                   source={OrdersMajor}
                   color="base"

@@ -8,14 +8,20 @@ export function Header() {
         {
             id: 1,
             Title: 'My Products',
-            Link: '/products'
+            Link: 'product/products/'
         },
-        {
-            id: 2,
-            Title: 'Orders',
-            Link: '/orders'
-        },
-    ];
+    
+    {
+        id: 2,
+        Title: 'Orders',
+        Link: '/orders'
+    },
+    {
+        id: 4,
+        Title: 'Details',
+        Link: 'product/productDetail'
+    },
+];
     const settings = [
         {
             id: 1,
@@ -43,7 +49,7 @@ export function Header() {
             <div className='Header_content flex space-between align-center'>
                 <div className='leftContent flex '>
                     <div className='branding flex align-center'>
-                        <Link to='/'><img width={180} src={logo} alt="logo" /></Link>
+                        <Link to='/'><img width={130} src={logo} alt="logo" /></Link>
                     </div>
                     <div className='navigation'>
                         {pages.map((page) => (
