@@ -149,7 +149,7 @@ export const products = [
         title: "Unisex Garment-Dyed T-shirt",
         tagline: "Comfort Colors® 1717",
         category: "t-shirts",
-        tag: ["Best seller", "New arrivals"],
+        tag: ["Best seller"],
         about: "Comfort Colors introduces its garment-dyed t-shirt; a fully customizable tee made 100% with ring-spun cotton. The soft-washed, garment-dyed fabric brings extra coziness to your wardrobe while the relaxed fit makes it an excellent daily choice. The double-needle stitching throughout the tee makes it highly durable while the lack of side-seams helps the shirt retain its tubular shape.",
         KeyFeatures: [{
             title: "Shoulder tape",

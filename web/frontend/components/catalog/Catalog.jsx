@@ -28,7 +28,8 @@ export function Catalog(props) {
                 </div>
                 <div className='cards'>
                     {data?.map((item, i) => {
-                        return <Card key={i} data={item} />
+                        
+                        return item.tag.includes("New arrivals") && i < 2 && <Card key={i} data={item} />
                     })
                     }
                 </div>
