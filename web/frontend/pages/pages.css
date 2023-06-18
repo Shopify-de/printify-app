@@ -210,3 +210,153 @@
     color: var(--textDark);
     font-family: CerebriSansBold;
 }
+
+
+/* .product */
+.media_container {
+    display: flex;
+    gap: 20px;
+    width: 48%;
+}
+.product_wrapper{
+    display: flex;
+    gap: 20px;
+}
+.media_carousal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main_image{
+    width: 100%;
+}
+.details_container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.details_wrapper{
+    width: 100%;
+    padding: 80px 0 0 80px ;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail_cat{
+    font-size: .875em;
+    line-height: 1.25rem;
+    font-weight: 400;
+    font-family: RobotoRegular;
+    color: #9fa4a5;
+    margin-bottom: 4px;
+}
+.detail_title{
+    font-size: 2em;
+    line-height: 2.5rem;
+    font-weight: 400;
+    font-family: RobotoBold;
+    margin-bottom: 10px;
+}
+.detail_tagLine{
+    font-size: 1em;
+    line-height: 1.5rem;
+    color: #485256;
+    font-family: RobotoRegular;
+    margin-bottom: 15px;
+}
+.detail_desctiption li:not(:last-child){
+    padding-bottom: 4px;
+}
+
+.detail_desctiption li{
+
+    margin-left: 20px;
+}
+.detail_desctiption li{
+    list-style-type: disc;
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: #17262b;
+    font-family: RobotoRegular;
+}
+.read_more{
+    color: var(--primaryColor);
+    font-size: 16px;
+    font-family: RobotoRegular;
+    margin-top: 20px;
+}
+.product_content{
+    margin-top: 80px;
+}
+.content_wrapper{
+    padding: 40px 0;
+    border-bottom: 1px solid #e3e4e5;
+    display: grid;
+    grid-template-columns: 35% 1fr;
+}
+.content_heading{
+    font-size: 36px;
+    font-family: CerebriSansBold;
+    color: var(--textDark);
+    /* width: 100%; */
+}
+.content_desc{
+    font-size: 16px;
+    line-height: 24px;
+    font-family: RobotoRegular;
+    color: var(--textDark);
+}
+.features{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 48% 48%;
+}
+.features_item{
+    width: 100%;
+}
+.feature_title{
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: RobotoRegular;
+    color: var(--textDark);
+}
+.feature_des{
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 22px;
+    font-family: RobotoRegular;
+    color: #9fa4a5
+}
+
+
+/* search */
+.search_result{
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 15px;
+    font-family: CerebriSansBold;
+    color: var(--textDark);
+    margin-bottom: 30px;
+}
+.search_wrapper{
+    background: #fff;
+    min-height: 100h;
+}
+.not_found{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: RobotoRegular;
+    text-align: center;
+    color: var(--textDark);
+}
+
+.search_content{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}

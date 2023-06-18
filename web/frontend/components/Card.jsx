@@ -7,6 +7,7 @@ export function Card(props) {
 
   return (
     <Link to={`/details?id=${item.id}`}>
+      
     <div className='card_item'>
         <div className='card_image'>
           <span className={`${item.tag[0].replaceAll(" ", '')} card_tag`} >{item.tag[0]}</span>
